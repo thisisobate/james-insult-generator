@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        text-align: center;
+      }
+
+      button {
+        width: 100px;
+        height: 50px;
+      }
+
+      #replyBox {
+        margin-top: 10%;
+        font-size: 40px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      I have serious problem with people answering James. Please if your name is
+      james, leave my site
+    </h1>
+
+    <button onclick="myFunction()">Try it</button>
+    <br /><br />
+    <div id="replyBox"></div>
+
+    <script>
+      //let btn = document.createElement("BUTTON")
+      //btnNo.innerHTML = "ENTER"
+      //let button = document.quer
+
+      var car = ['your papa!', 'Stupid Man!', 'Thunder fire you!'];
+      var insultGenerator = car[Math.floor(Math.random() * (car.length - 1))];
+
+      function myFunction() {
+        var myReply;
+
+        var username = prompt("What's your name?");
+
+        if (username.toLowerCase() == 'james') {
+          myReply = 'Hello ' + username + ',' + ' ' + insultGenerator;
+        } else {
+          myReply = 'Hello ' + username + '! How are you today?';
+        }
+
+        document.getElementById('replyBox').innerHTML = myReply;
+      }
+    </script>
+  </body>
+</html>
